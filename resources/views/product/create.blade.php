@@ -7,25 +7,28 @@
                <div class="card mt-5 shadow">
                 <div class="card-body m-3">
                     <div class="">
+                        <form action="{{route('product.store')}}" method="post">
+                            @csrf 
                         <div class="mb-3 mt-3">
                             <label  class="form-label">Name</label>
-                            <input type="name" class="form-control">
+                            <input type="name" name="name" class="form-control">
                         </div>
                         <div class="mb-3">
                             <label  class="form-label">Price</label>
-                            <input type="price" class="form-control">
+                            <input type="price" name="price" class="form-control">
                         </div>
                         <div class="mb-3">
                             <label  class="form-label">Size</label>
-                            <input type="size" class="form-control">
+                            <input type="size" name="size" class="form-control">
                         </div>
                         <div class="mb-3">
                             <label  class="form-label">Quantity</label>
-                            <input type="quantity" class="form-control">
+                            <input type="quantity" name="quantity" class="form-control">
                         </div>
                         <div class="mb-4 text-center">
                             <button class="btn btn-lg btn-outline-primary">Submit</button>
                         </div>
+                        </form>
                     </div>
                  </div>
                </div>
