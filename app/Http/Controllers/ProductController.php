@@ -40,6 +40,12 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
+        // $request -> validate([
+        //     'name'=>'required',
+        //     'price'=>'required',
+        //     'size'=>'required',
+        //     'quantity'=>'required',
+        // ]);
         //
         $product = new Product();
         $product->name = $request->name;
@@ -59,6 +65,7 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         //
+        return view("product.detail",compact('product'));
     }
 
     /**
@@ -82,6 +89,13 @@ class ProductController extends Controller
      */
     public function update(UpdateProductRequest $request, Product $product)
     {
+        // $request -> validate([
+        //     'name'=> 'required',
+        //     'price'=> 'required',
+        //     'size'=> 'required',
+        //     'quantity'=> 'required',
+
+        // ]);
         //
         $product->name = $request->name;
         $product->price = $request->price;
